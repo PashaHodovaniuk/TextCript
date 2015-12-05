@@ -1,1 +1,10 @@
 E:\GitProject\Lab5\Test\Test\bin\Debug\Test.exe.config
+E:\GitProject\Kyrsovtextcript\Test\Test\bin\Debug\Test.exe.config
+E:\GitProject\Kyrsovtextcript\Test\Test\bin\Debug\Test.exe
+E:\GitProject\Kyrsovtextcript\Test\Test\bin\Debug\Test.pdb
+E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.Properties.Resources.resources
+E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.exe
+E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.pdb
+E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.CriptoText.resources
