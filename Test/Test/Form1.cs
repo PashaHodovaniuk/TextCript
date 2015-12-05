@@ -206,7 +206,7 @@ namespace Test
 
             if (e.KeyChar == (char)Keys.Back)
             {
-                if (Text3.TextLength >= 1)
+                if (Textcript3.TextLength >= 1)
                 {
                     Textcript3.Text = Textcript3.Text.Remove(Textcript3.TextLength - 1, 1);
                 }
@@ -214,7 +214,9 @@ namespace Test
             else
             {
                 Textcript3.Text += e.KeyChar;
-            }            
+            }
+            if (Text3.TextLength <= 1)
+                Numsdv.Text = "0";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -300,7 +302,7 @@ namespace Test
         public void arrayRotateRight(char[] array)
         {
             char temp = array[array.Length-1];
-            for (int i = array.Length - 1; i >= 1; i--)
+            for (int i = array.Length - 2; i >= 0; i--)
             {
                 mastexcopy[i+1] = array[i];
             }

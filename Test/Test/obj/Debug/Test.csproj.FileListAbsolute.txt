@@ -8,3 +8,12 @@ E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.csproj.GenerateResource.C
 E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.exe
 E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.pdb
 E:\GitProject\Kyrsovtextcript\Test\Test\obj\Debug\Test.CriptoText.resources
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\bin\Debug\Test.exe.config
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\obj\Debug\Test.exe
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\obj\Debug\Test.pdb
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\bin\Debug\Test.exe
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\bin\Debug\Test.pdb
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\obj\Debug\Test.CriptoText.resources
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\Pasha\Desktop\test\TextCript\Test\Test\obj\Debug\Test.csproj.GenerateResource.Cache
