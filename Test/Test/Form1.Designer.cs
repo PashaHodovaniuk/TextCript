@@ -56,11 +56,19 @@
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.шифроватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Text3 = new System.Windows.Forms.TextBox();
+            this.Textcript3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Numsdv = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.FullCript.SuspendLayout();
             this.Cript1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.Cript2.SuspendLayout();
+            this.Cript3.SuspendLayout();
             this.contextMenuStrip3.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.SuspendLayout();
@@ -207,6 +215,13 @@
             // 
             // Cript3
             // 
+            this.Cript3.Controls.Add(this.label8);
+            this.Cript3.Controls.Add(this.label7);
+            this.Cript3.Controls.Add(this.Numsdv);
+            this.Cript3.Controls.Add(this.button2);
+            this.Cript3.Controls.Add(this.button1);
+            this.Cript3.Controls.Add(this.Textcript3);
+            this.Cript3.Controls.Add(this.Text3);
             this.Cript3.Location = new System.Drawing.Point(4, 22);
             this.Cript3.Name = "Cript3";
             this.Cript3.Padding = new System.Windows.Forms.Padding(3);
@@ -278,7 +293,7 @@
             // очиститьToolStripMenuItem2
             // 
             this.очиститьToolStripMenuItem2.Name = "очиститьToolStripMenuItem2";
-            this.очиститьToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.очиститьToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.очиститьToolStripMenuItem2.Text = "Очистить";
             this.очиститьToolStripMenuItem2.Click += new System.EventHandler(this.очиститьToolStripMenuItem2_Click);
             // 
@@ -288,21 +303,87 @@
             this.шифроватьToolStripMenuItem,
             this.очиститьToolStripMenuItem3});
             this.contextMenuStrip4.Name = "contextMenuStrip4";
-            this.contextMenuStrip4.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip4.Size = new System.Drawing.Size(139, 48);
             // 
             // шифроватьToolStripMenuItem
             // 
             this.шифроватьToolStripMenuItem.Name = "шифроватьToolStripMenuItem";
-            this.шифроватьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.шифроватьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.шифроватьToolStripMenuItem.Text = "Шифровать";
             this.шифроватьToolStripMenuItem.Click += new System.EventHandler(this.шифроватьToolStripMenuItem_Click);
             // 
             // очиститьToolStripMenuItem3
             // 
             this.очиститьToolStripMenuItem3.Name = "очиститьToolStripMenuItem3";
-            this.очиститьToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.очиститьToolStripMenuItem3.Size = new System.Drawing.Size(138, 22);
             this.очиститьToolStripMenuItem3.Text = "Очистить";
             this.очиститьToolStripMenuItem3.Click += new System.EventHandler(this.очиститьToolStripMenuItem3_Click);
+            // 
+            // Text3
+            // 
+            this.Text3.Location = new System.Drawing.Point(159, 50);
+            this.Text3.Multiline = true;
+            this.Text3.Name = "Text3";
+            this.Text3.Size = new System.Drawing.Size(160, 73);
+            this.Text3.TabIndex = 0;
+            this.Text3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text3_KeyPress);
+            // 
+            // Textcript3
+            // 
+            this.Textcript3.Location = new System.Drawing.Point(387, 50);
+            this.Textcript3.Multiline = true;
+            this.Textcript3.Name = "Textcript3";
+            this.Textcript3.ReadOnly = true;
+            this.Textcript3.Size = new System.Drawing.Size(164, 73);
+            this.Textcript3.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(290, 181);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(29, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(387, 181);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(29, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Numsdv
+            // 
+            this.Numsdv.Location = new System.Drawing.Point(334, 181);
+            this.Numsdv.Name = "Numsdv";
+            this.Numsdv.ReadOnly = true;
+            this.Numsdv.Size = new System.Drawing.Size(36, 20);
+            this.Numsdv.TabIndex = 4;
+            this.Numsdv.Text = "0";
+            this.Numsdv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(159, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Текст";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(384, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Шифрований сообщение";
             // 
             // CriptoText
             // 
@@ -319,6 +400,8 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.Cript2.ResumeLayout(false);
             this.Cript2.PerformLayout();
+            this.Cript3.ResumeLayout(false);
+            this.Cript3.PerformLayout();
             this.contextMenuStrip3.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -354,6 +437,13 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
         private System.Windows.Forms.ToolStripMenuItem шифроватьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem очиститьToolStripMenuItem3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Numsdv;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Textcript3;
+        private System.Windows.Forms.TextBox Text3;
     }
 }
 
