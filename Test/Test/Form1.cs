@@ -41,10 +41,10 @@ namespace Test
         private void шифроварьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Textcript1.Clear();
-            encrypriontext();
+            encrypriontext1();
         }
 
-        private void encrypriontext()
+        private void encrypriontext1()
         {
             long maxlentext = 52;
             char[] mastext = new char[] { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
@@ -96,6 +96,95 @@ namespace Test
             Textcript1.Clear();
         }
 
+        private void очиститьToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Key2.Clear();
+        }
+
+        private void очиститьToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Textcript2.Clear();
+        }
+
+        private void encrypriontext2()
+        {
+            char[,] mastext = new char[8, 9] {{'1','з','д','р','а','в','о','м','ы'},{'1','з','д','р','а','в','о','м','ы'}, {'1','с','л','я','щ','и','й','б','г'},
+            {'1','е','ё','ж','к','н','п','т','у'}, {'1','ф','х','ц','ч','ш','ъ','ь','э'}, {'1','ю','+','-','/','*','.',',','!'}, 
+            {'1','?','(',')','@',' ',':','1','2'}, {'1','3','4','5','6','7','8','9','0'}};
+            string texted = Text2.Text.ToLower();
+            char[] maschartext;
+            maschartext = texted.ToCharArray();
+            string Keid = Key2.Text.ToLower();
+            char[] mascharkey;
+            mascharkey = Keid.ToCharArray();
+            int RowText;
+            int ColumnText;
+            int RowKey;
+            int ColumnKey;
+            int[] LengthText = new int[maschartext.Length];
+            int[] LengthKey = new int[maschartext.Length];
+            int[] Key = new int[maschartext.Length];
+            bool flag;
+            for (int k=0; k<maschartext.Length;k++)
+            {
+                flag = false;
+                RowText = 0;
+                ColumnText = 0;
+                for (int i = 1; i < 8; i++)
+                    {
+                        for (int j = 1; j < 9; j++)
+                            {         
+                                if (mastext[i, j] == maschartext[k])
+                                    {
+                                        RowText = i;
+                                        ColumnText = j;
+                                        flag = true;
+                                        break;                                        
+                                    }
+                            }
+                        if (flag)
+                        {
+                            LengthText[k] = int.Parse(RowText.ToString() + ColumnText.ToString());
+                            break;
+                        }
+                            
+                    }
+            }
+            for (int k = 0; k < mascharkey.Length; k++)
+            {
+                flag = false;
+                RowKey = 0;
+                ColumnKey = 0;
+                for (int i = 1; i < 8; i++)
+                {
+                    for (int j = 1; j < 9; j++)
+                    {
+                        if (mastext[i, j] == mascharkey[k])
+                        {
+                            RowKey = i;
+                            ColumnKey = j;
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                        LengthKey[k] = int.Parse(RowKey.ToString() + ColumnKey.ToString());                        
+                        break;
+                    }
+                }
+            }
+            for (int i = 0; i < mascharkey.Length; i++)
+            {
+                Key[i] = LengthText[i] + LengthKey[i];
+                Textcript2.Text += Key[i].ToString() + " ";
+            }
+        }
+
+        private void шифроватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            encrypriontext2();
+        }
        
     }
 }
