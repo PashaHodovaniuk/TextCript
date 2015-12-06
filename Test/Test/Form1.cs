@@ -91,7 +91,7 @@ namespace Test
                 {
                     lenkey = key;
                 }
-                Textcript1.Text += mastext[lenkey] + " ";
+                Textcript1.Text += mastext[lenkey];
             }
         }
 
@@ -441,6 +441,58 @@ namespace Test
                     mastexcopy[i - 1] = array[i];
                 }
                 mastexcopy[array.Length - 1] = temp;
+            }
+        }
+
+        private void расшифроватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            decryptiontext1();
+        }
+
+        private void decryptiontext1()
+        {
+            int maxlentext = 52;
+            char[] mastext = new char[] { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
+                'р', 'с', 'т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я','*','/','+','-','.',',','?','!',' ','0','1','2',
+                '3','4','5','6','7','8','9'};
+            int lenmastext = mastext.Length;
+            string texted = Dtextcript1.Text.ToLower();
+            char[] maschardtext;
+            maschardtext = texted.ToCharArray();
+            string[] ttext = DKey1.Text.Split(',');
+            int[] masdkey = new int[ttext.Length - 1];
+            for (int i = 0; i < ttext.Length - 1; i++)
+            {
+                masdkey[i] = int.Parse(ttext[i]);
+            }
+            int key;
+            int lenkey;
+            int[] dnum = new int[masdkey.Length];
+            for (int i = 0; i < maschardtext.Length; i++)
+            {
+                for (int k = 0; k < mastext.Length; k++)
+                {
+                    if (maschardtext[i] == mastext[k])
+                    {
+                        dnum[i] = k;
+                        break;
+                    }
+                }
+            }
+            key = 0;
+            for (int j = 0; j < masdkey.Length; j++)
+            {
+                key = dnum[j] + masdkey[j];
+                if (key >= 52)
+                {
+                    key = key - maxlentext;
+                    lenkey = 0 + Math.Abs(key);
+                }
+                else
+                {
+                    lenkey = key;
+                }
+                DText1.Text += mastext[lenkey];
             }
         }
     }

@@ -487,13 +487,14 @@
             this.contextMenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.расшифроватьToolStripMenuItem});
             this.contextMenuStrip5.Name = "contextMenuStrip5";
-            this.contextMenuStrip5.Size = new System.Drawing.Size(158, 26);
+            this.contextMenuStrip5.Size = new System.Drawing.Size(158, 48);
             // 
             // расшифроватьToolStripMenuItem
             // 
             this.расшифроватьToolStripMenuItem.Name = "расшифроватьToolStripMenuItem";
             this.расшифроватьToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.расшифроватьToolStripMenuItem.Text = "Расшифровать";
+            this.расшифроватьToolStripMenuItem.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem_Click);
             // 
             // DTextcript2
             // 
