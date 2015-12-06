@@ -31,6 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.FullCript = new System.Windows.Forms.TabControl();
             this.Cript1 = new System.Windows.Forms.TabPage();
+            this.Timedecript1 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.timecript1 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.расшифроватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DText1 = new System.Windows.Forms.TextBox();
+            this.DKey1 = new System.Windows.Forms.TextBox();
+            this.Dtextcript1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.шифроварьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +56,18 @@
             this.Key1 = new System.Windows.Forms.TextBox();
             this.Text1 = new System.Windows.Forms.TextBox();
             this.Cript2 = new System.Windows.Forms.TabPage();
+            this.TimeDecript2 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Timecript2 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.расшифроватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DText2 = new System.Windows.Forms.TextBox();
+            this.DKey2 = new System.Windows.Forms.TextBox();
+            this.DTextcript2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.шифроватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +80,17 @@
             this.Key2 = new System.Windows.Forms.TextBox();
             this.Text2 = new System.Windows.Forms.TextBox();
             this.Cript3 = new System.Windows.Forms.TabPage();
+            this.TimeDecript3 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Timecript3 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.DDecriptbut = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.DNumsdv = new System.Windows.Forms.TextBox();
+            this.DText3 = new System.Windows.Forms.TextBox();
+            this.DTextcript3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Numsdv = new System.Windows.Forms.TextBox();
@@ -63,52 +98,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Textcript3 = new System.Windows.Forms.TextBox();
             this.Text3 = new System.Windows.Forms.TextBox();
-            this.Dtextcript1 = new System.Windows.Forms.TextBox();
-            this.DKey1 = new System.Windows.Forms.TextBox();
-            this.DText1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.расшифроватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DTextcript2 = new System.Windows.Forms.TextBox();
-            this.DKey2 = new System.Windows.Forms.TextBox();
-            this.DText2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.DTextcript3 = new System.Windows.Forms.TextBox();
-            this.DText3 = new System.Windows.Forms.TextBox();
-            this.DNumsdv = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.расшифроватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DDecriptbut = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label18 = new System.Windows.Forms.Label();
-            this.timecript1 = new System.Windows.Forms.Label();
-            this.Timedecript1 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.TimeDecript2 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.Timecript2 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.TimeDecript3 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.Timecript3 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.Stegano1 = new System.Windows.Forms.TabPage();
             this.FullCript.SuspendLayout();
             this.Cript1.SuspendLayout();
+            this.contextMenuStrip5.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.Cript2.SuspendLayout();
+            this.contextMenuStrip6.SuspendLayout();
             this.contextMenuStrip4.SuspendLayout();
             this.contextMenuStrip3.SuspendLayout();
             this.Cript3.SuspendLayout();
-            this.contextMenuStrip5.SuspendLayout();
-            this.contextMenuStrip6.SuspendLayout();
             this.SuspendLayout();
             // 
             // FullCript
@@ -116,6 +117,7 @@
             this.FullCript.Controls.Add(this.Cript1);
             this.FullCript.Controls.Add(this.Cript2);
             this.FullCript.Controls.Add(this.Cript3);
+            this.FullCript.Controls.Add(this.Stegano1);
             this.FullCript.Location = new System.Drawing.Point(12, 12);
             this.FullCript.Name = "FullCript";
             this.FullCript.SelectedIndex = 0;
@@ -147,6 +149,108 @@
             this.Cript1.TabIndex = 0;
             this.Cript1.Text = "Cript1";
             this.Cript1.UseVisualStyleBackColor = true;
+            // 
+            // Timedecript1
+            // 
+            this.Timedecript1.AutoSize = true;
+            this.Timedecript1.Location = new System.Drawing.Point(602, 206);
+            this.Timedecript1.Name = "Timedecript1";
+            this.Timedecript1.Size = new System.Drawing.Size(0, 13);
+            this.Timedecript1.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(512, 206);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(67, 13);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Time Decript";
+            // 
+            // timecript1
+            // 
+            this.timecript1.AutoSize = true;
+            this.timecript1.Location = new System.Drawing.Point(602, 162);
+            this.timecript1.Name = "timecript1";
+            this.timecript1.Size = new System.Drawing.Size(0, 13);
+            this.timecript1.TabIndex = 13;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(512, 162);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 13);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Time cript";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ContextMenuStrip = this.contextMenuStrip5;
+            this.label11.Location = new System.Drawing.Point(512, 229);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Текст";
+            // 
+            // contextMenuStrip5
+            // 
+            this.contextMenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.расшифроватьToolStripMenuItem});
+            this.contextMenuStrip5.Name = "contextMenuStrip5";
+            this.contextMenuStrip5.Size = new System.Drawing.Size(158, 26);
+            // 
+            // расшифроватьToolStripMenuItem
+            // 
+            this.расшифроватьToolStripMenuItem.Name = "расшифроватьToolStripMenuItem";
+            this.расшифроватьToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.расшифроватьToolStripMenuItem.Text = "Расшифровать";
+            this.расшифроватьToolStripMenuItem.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(264, 229);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Ключ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 229);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Шифрованое сообщение";
+            // 
+            // DText1
+            // 
+            this.DText1.Location = new System.Drawing.Point(515, 245);
+            this.DText1.Multiline = true;
+            this.DText1.Name = "DText1";
+            this.DText1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DText1.Size = new System.Drawing.Size(202, 96);
+            this.DText1.TabIndex = 8;
+            // 
+            // DKey1
+            // 
+            this.DKey1.Location = new System.Drawing.Point(267, 245);
+            this.DKey1.Name = "DKey1";
+            this.DKey1.Size = new System.Drawing.Size(202, 20);
+            this.DKey1.TabIndex = 7;
+            this.DKey1.WordWrap = false;
+            // 
+            // Dtextcript1
+            // 
+            this.Dtextcript1.Location = new System.Drawing.Point(24, 245);
+            this.Dtextcript1.Name = "Dtextcript1";
+            this.Dtextcript1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.Dtextcript1.Size = new System.Drawing.Size(202, 20);
+            this.Dtextcript1.TabIndex = 6;
+            this.Dtextcript1.WordWrap = false;
             // 
             // label3
             // 
@@ -273,6 +377,106 @@
             this.Cript2.Text = "Cript2";
             this.Cript2.UseVisualStyleBackColor = true;
             // 
+            // TimeDecript2
+            // 
+            this.TimeDecript2.AutoSize = true;
+            this.TimeDecript2.Location = new System.Drawing.Point(586, 207);
+            this.TimeDecript2.Name = "TimeDecript2";
+            this.TimeDecript2.Size = new System.Drawing.Size(0, 13);
+            this.TimeDecript2.TabIndex = 19;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(496, 207);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(67, 13);
+            this.label21.TabIndex = 18;
+            this.label21.Text = "Time Decript";
+            // 
+            // Timecript2
+            // 
+            this.Timecript2.AutoSize = true;
+            this.Timecript2.Location = new System.Drawing.Point(586, 163);
+            this.Timecript2.Name = "Timecript2";
+            this.Timecript2.Size = new System.Drawing.Size(0, 13);
+            this.Timecript2.TabIndex = 17;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(496, 163);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(53, 13);
+            this.label23.TabIndex = 16;
+            this.label23.Text = "Time cript";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ContextMenuStrip = this.contextMenuStrip6;
+            this.label14.Location = new System.Drawing.Point(496, 232);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Текст";
+            // 
+            // contextMenuStrip6
+            // 
+            this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.расшифроватьToolStripMenuItem1});
+            this.contextMenuStrip6.Name = "contextMenuStrip6";
+            this.contextMenuStrip6.Size = new System.Drawing.Size(158, 26);
+            // 
+            // расшифроватьToolStripMenuItem1
+            // 
+            this.расшифроватьToolStripMenuItem1.Name = "расшифроватьToolStripMenuItem1";
+            this.расшифроватьToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.расшифроватьToolStripMenuItem1.Text = "Расшифровать";
+            this.расшифроватьToolStripMenuItem1.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem1_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(268, 232);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(33, 13);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Ключ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(29, 232);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(132, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Шифрование сообщение";
+            // 
+            // DText2
+            // 
+            this.DText2.Location = new System.Drawing.Point(499, 248);
+            this.DText2.Multiline = true;
+            this.DText2.Name = "DText2";
+            this.DText2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DText2.Size = new System.Drawing.Size(182, 105);
+            this.DText2.TabIndex = 8;
+            // 
+            // DKey2
+            // 
+            this.DKey2.Location = new System.Drawing.Point(271, 248);
+            this.DKey2.Multiline = true;
+            this.DKey2.Name = "DKey2";
+            this.DKey2.Size = new System.Drawing.Size(182, 105);
+            this.DKey2.TabIndex = 7;
+            // 
+            // DTextcript2
+            // 
+            this.DTextcript2.Location = new System.Drawing.Point(32, 248);
+            this.DTextcript2.Name = "DTextcript2";
+            this.DTextcript2.Size = new System.Drawing.Size(182, 20);
+            this.DTextcript2.TabIndex = 6;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -390,6 +594,103 @@
             this.Cript3.Text = "Cript3";
             this.Cript3.UseVisualStyleBackColor = true;
             // 
+            // TimeDecript3
+            // 
+            this.TimeDecript3.AutoSize = true;
+            this.TimeDecript3.Location = new System.Drawing.Point(574, 184);
+            this.TimeDecript3.Name = "TimeDecript3";
+            this.TimeDecript3.Size = new System.Drawing.Size(0, 13);
+            this.TimeDecript3.TabIndex = 23;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(484, 184);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(67, 13);
+            this.label22.TabIndex = 22;
+            this.label22.Text = "Time Decript";
+            // 
+            // Timecript3
+            // 
+            this.Timecript3.AutoSize = true;
+            this.Timecript3.Location = new System.Drawing.Point(574, 140);
+            this.Timecript3.Name = "Timecript3";
+            this.Timecript3.Size = new System.Drawing.Size(0, 13);
+            this.Timecript3.TabIndex = 21;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(484, 140);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 13);
+            this.label25.TabIndex = 20;
+            this.label25.Text = "Time cript";
+            // 
+            // DDecriptbut
+            // 
+            this.DDecriptbut.Location = new System.Drawing.Point(377, 332);
+            this.DDecriptbut.Name = "DDecriptbut";
+            this.DDecriptbut.Size = new System.Drawing.Size(92, 23);
+            this.DDecriptbut.TabIndex = 13;
+            this.DDecriptbut.Text = "Расшифровать";
+            this.DDecriptbut.UseVisualStyleBackColor = true;
+            this.DDecriptbut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DDecriptbut_MouseUp);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(280, 316);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 13);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Кол-во сдвиг";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(384, 201);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Текст";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(156, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(132, 13);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Шифрование сообщение";
+            // 
+            // DNumsdv
+            // 
+            this.DNumsdv.Location = new System.Drawing.Point(280, 335);
+            this.DNumsdv.Name = "DNumsdv";
+            this.DNumsdv.Size = new System.Drawing.Size(73, 20);
+            this.DNumsdv.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.DNumsdv, "Введите число от 1 до 52");
+            // 
+            // DText3
+            // 
+            this.DText3.Location = new System.Drawing.Point(387, 217);
+            this.DText3.Multiline = true;
+            this.DText3.Name = "DText3";
+            this.DText3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DText3.Size = new System.Drawing.Size(160, 92);
+            this.DText3.TabIndex = 8;
+            // 
+            // DTextcript3
+            // 
+            this.DTextcript3.Location = new System.Drawing.Point(159, 217);
+            this.DTextcript3.Multiline = true;
+            this.DTextcript3.Name = "DTextcript3";
+            this.DTextcript3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DTextcript3.Size = new System.Drawing.Size(160, 92);
+            this.DTextcript3.TabIndex = 7;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -459,309 +760,20 @@
             this.Text3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Text3_KeyDown);
             this.Text3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text3_KeyPress);
             // 
-            // Dtextcript1
-            // 
-            this.Dtextcript1.Location = new System.Drawing.Point(24, 245);
-            this.Dtextcript1.Name = "Dtextcript1";
-            this.Dtextcript1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.Dtextcript1.Size = new System.Drawing.Size(202, 20);
-            this.Dtextcript1.TabIndex = 6;
-            this.Dtextcript1.WordWrap = false;
-            // 
-            // DKey1
-            // 
-            this.DKey1.Location = new System.Drawing.Point(267, 245);
-            this.DKey1.Name = "DKey1";
-            this.DKey1.Size = new System.Drawing.Size(202, 20);
-            this.DKey1.TabIndex = 7;
-            this.DKey1.WordWrap = false;
-            // 
-            // DText1
-            // 
-            this.DText1.Location = new System.Drawing.Point(515, 245);
-            this.DText1.Multiline = true;
-            this.DText1.Name = "DText1";
-            this.DText1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DText1.Size = new System.Drawing.Size(202, 96);
-            this.DText1.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 229);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Шифрованое сообщение";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(264, 229);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Ключ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ContextMenuStrip = this.contextMenuStrip5;
-            this.label11.Location = new System.Drawing.Point(512, 229);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Текст";
-            // 
-            // contextMenuStrip5
-            // 
-            this.contextMenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.расшифроватьToolStripMenuItem});
-            this.contextMenuStrip5.Name = "contextMenuStrip5";
-            this.contextMenuStrip5.Size = new System.Drawing.Size(158, 26);
-            // 
-            // расшифроватьToolStripMenuItem
-            // 
-            this.расшифроватьToolStripMenuItem.Name = "расшифроватьToolStripMenuItem";
-            this.расшифроватьToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.расшифроватьToolStripMenuItem.Text = "Расшифровать";
-            this.расшифроватьToolStripMenuItem.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem_Click);
-            // 
-            // DTextcript2
-            // 
-            this.DTextcript2.Location = new System.Drawing.Point(32, 248);
-            this.DTextcript2.Name = "DTextcript2";
-            this.DTextcript2.Size = new System.Drawing.Size(182, 20);
-            this.DTextcript2.TabIndex = 6;
-            // 
-            // DKey2
-            // 
-            this.DKey2.Location = new System.Drawing.Point(271, 248);
-            this.DKey2.Multiline = true;
-            this.DKey2.Name = "DKey2";
-            this.DKey2.Size = new System.Drawing.Size(182, 105);
-            this.DKey2.TabIndex = 7;
-            // 
-            // DText2
-            // 
-            this.DText2.Location = new System.Drawing.Point(499, 248);
-            this.DText2.Multiline = true;
-            this.DText2.Name = "DText2";
-            this.DText2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DText2.Size = new System.Drawing.Size(182, 105);
-            this.DText2.TabIndex = 8;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 232);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Шифрование сообщение";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(268, 232);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 13);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Ключ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ContextMenuStrip = this.contextMenuStrip6;
-            this.label14.Location = new System.Drawing.Point(496, 232);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Текст";
-            // 
-            // DTextcript3
-            // 
-            this.DTextcript3.Location = new System.Drawing.Point(159, 217);
-            this.DTextcript3.Multiline = true;
-            this.DTextcript3.Name = "DTextcript3";
-            this.DTextcript3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DTextcript3.Size = new System.Drawing.Size(160, 92);
-            this.DTextcript3.TabIndex = 7;
-            // 
-            // DText3
-            // 
-            this.DText3.Location = new System.Drawing.Point(387, 217);
-            this.DText3.Multiline = true;
-            this.DText3.Name = "DText3";
-            this.DText3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DText3.Size = new System.Drawing.Size(160, 92);
-            this.DText3.TabIndex = 8;
-            // 
-            // DNumsdv
-            // 
-            this.DNumsdv.Location = new System.Drawing.Point(280, 335);
-            this.DNumsdv.Name = "DNumsdv";
-            this.DNumsdv.Size = new System.Drawing.Size(73, 20);
-            this.DNumsdv.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.DNumsdv, "Введите число от 1 до 52");
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(156, 201);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 13);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Шифрование сообщение";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(384, 201);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Текст";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(280, 316);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 13);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Кол-во сдвиг";
-            // 
-            // contextMenuStrip6
-            // 
-            this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.расшифроватьToolStripMenuItem1});
-            this.contextMenuStrip6.Name = "contextMenuStrip6";
-            this.contextMenuStrip6.Size = new System.Drawing.Size(158, 26);
-            // 
-            // расшифроватьToolStripMenuItem1
-            // 
-            this.расшифроватьToolStripMenuItem1.Name = "расшифроватьToolStripMenuItem1";
-            this.расшифроватьToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
-            this.расшифроватьToolStripMenuItem1.Text = "Расшифровать";
-            this.расшифроватьToolStripMenuItem1.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem1_Click);
-            // 
-            // DDecriptbut
-            // 
-            this.DDecriptbut.Location = new System.Drawing.Point(377, 332);
-            this.DDecriptbut.Name = "DDecriptbut";
-            this.DDecriptbut.Size = new System.Drawing.Size(92, 23);
-            this.DDecriptbut.TabIndex = 13;
-            this.DDecriptbut.Text = "Расшифровать";
-            this.DDecriptbut.UseVisualStyleBackColor = true;
-            this.DDecriptbut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DDecriptbut_MouseUp);
-            // 
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Оповищение!";
             // 
-            // label18
+            // Stegano1
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(512, 162);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(53, 13);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "Time cript";
-            // 
-            // timecript1
-            // 
-            this.timecript1.AutoSize = true;
-            this.timecript1.Location = new System.Drawing.Point(602, 162);
-            this.timecript1.Name = "timecript1";
-            this.timecript1.Size = new System.Drawing.Size(0, 13);
-            this.timecript1.TabIndex = 13;
-            // 
-            // Timedecript1
-            // 
-            this.Timedecript1.AutoSize = true;
-            this.Timedecript1.Location = new System.Drawing.Point(602, 206);
-            this.Timedecript1.Name = "Timedecript1";
-            this.Timedecript1.Size = new System.Drawing.Size(0, 13);
-            this.Timedecript1.TabIndex = 15;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(512, 206);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(67, 13);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "Time Decript";
-            // 
-            // TimeDecript2
-            // 
-            this.TimeDecript2.AutoSize = true;
-            this.TimeDecript2.Location = new System.Drawing.Point(586, 207);
-            this.TimeDecript2.Name = "TimeDecript2";
-            this.TimeDecript2.Size = new System.Drawing.Size(0, 13);
-            this.TimeDecript2.TabIndex = 19;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(496, 207);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 13);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "Time Decript";
-            // 
-            // Timecript2
-            // 
-            this.Timecript2.AutoSize = true;
-            this.Timecript2.Location = new System.Drawing.Point(586, 163);
-            this.Timecript2.Name = "Timecript2";
-            this.Timecript2.Size = new System.Drawing.Size(0, 13);
-            this.Timecript2.TabIndex = 17;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(496, 163);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(53, 13);
-            this.label23.TabIndex = 16;
-            this.label23.Text = "Time cript";
-            // 
-            // TimeDecript3
-            // 
-            this.TimeDecript3.AutoSize = true;
-            this.TimeDecript3.Location = new System.Drawing.Point(574, 184);
-            this.TimeDecript3.Name = "TimeDecript3";
-            this.TimeDecript3.Size = new System.Drawing.Size(0, 13);
-            this.TimeDecript3.TabIndex = 23;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(484, 184);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(67, 13);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "Time Decript";
-            // 
-            // Timecript3
-            // 
-            this.Timecript3.AutoSize = true;
-            this.Timecript3.Location = new System.Drawing.Point(574, 140);
-            this.Timecript3.Name = "Timecript3";
-            this.Timecript3.Size = new System.Drawing.Size(0, 13);
-            this.Timecript3.TabIndex = 21;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(484, 140);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 13);
-            this.label25.TabIndex = 20;
-            this.label25.Text = "Time cript";
+            this.Stegano1.Location = new System.Drawing.Point(4, 22);
+            this.Stegano1.Name = "Stegano1";
+            this.Stegano1.Padding = new System.Windows.Forms.Padding(3);
+            this.Stegano1.Size = new System.Drawing.Size(747, 382);
+            this.Stegano1.TabIndex = 3;
+            this.Stegano1.Text = "Stegano1";
+            this.Stegano1.UseVisualStyleBackColor = true;
             // 
             // CriptoText
             // 
@@ -774,16 +786,16 @@
             this.FullCript.ResumeLayout(false);
             this.Cript1.ResumeLayout(false);
             this.Cript1.PerformLayout();
+            this.contextMenuStrip5.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.Cript2.ResumeLayout(false);
             this.Cript2.PerformLayout();
+            this.contextMenuStrip6.ResumeLayout(false);
             this.contextMenuStrip4.ResumeLayout(false);
             this.contextMenuStrip3.ResumeLayout(false);
             this.Cript3.ResumeLayout(false);
             this.Cript3.PerformLayout();
-            this.contextMenuStrip5.ResumeLayout(false);
-            this.contextMenuStrip6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -860,6 +872,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label Timecript3;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TabPage Stegano1;
     }
 }
 
