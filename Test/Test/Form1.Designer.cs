@@ -519,7 +519,6 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.ContextMenuStrip = this.contextMenuStrip6;
             this.label12.Location = new System.Drawing.Point(29, 232);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(132, 13);
@@ -538,6 +537,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.ContextMenuStrip = this.contextMenuStrip6;
             this.label14.Location = new System.Drawing.Point(496, 232);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 13);
@@ -599,13 +599,14 @@
             this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.расшифроватьToolStripMenuItem1});
             this.contextMenuStrip6.Name = "contextMenuStrip6";
-            this.contextMenuStrip6.Size = new System.Drawing.Size(158, 26);
+            this.contextMenuStrip6.Size = new System.Drawing.Size(158, 48);
             // 
             // расшифроватьToolStripMenuItem1
             // 
             this.расшифроватьToolStripMenuItem1.Name = "расшифроватьToolStripMenuItem1";
             this.расшифроватьToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
             this.расшифроватьToolStripMenuItem1.Text = "Расшифровать";
+            this.расшифроватьToolStripMenuItem1.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem1_Click);
             // 
             // CriptoText
             // 

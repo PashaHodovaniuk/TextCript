@@ -116,9 +116,9 @@ namespace Test
 
         private void encrypriontext2()
         {
-            char[,] mastext = new char[8, 9] {{'1','з','д','р','а','в','о','м','ы'},{'1','з','д','р','а','в','о','м','ы'}, {'1','с','л','я','щ','и','й','б','г'},
-            {'1','е','ё','ж','к','н','п','т','у'}, {'1','ф','х','ц','ч','ш','ъ','ь','э'}, {'1','ю','+','-','/','*','.',',','!'}, 
-            {'1','?','(',')','@',' ',':','1','2'}, {'1','3','4','5','6','7','8','9','0'}};
+            char[,] mastext = new char[8, 9] {{'x','x','x','x','x','x','x','x','x'},{'x','з','д','р','а','в','о','м','ы'}, {'x','с','л','я','щ','и','й','б','г'},
+            {'x','е','ё','ж','к','н','п','т','у'}, {'x','ф','х','ц','ч','ш','ъ','ь','э'}, {'x','ю','+','-','/','*','.',',','!'}, 
+            {'x','?','(',')','@',' ',':','1','2'}, {'x','3','4','5','6','7','8','9','0'}};
             string texted = Text2.Text.ToLower();
             char[] maschartext;
             maschartext = texted.ToCharArray();
@@ -133,7 +133,6 @@ namespace Test
             int[] LengthKey = new int[mascharkey.Length];
             int[] Key = new int[maschartext.Length];
             bool flag;
-            //bool flaglen = false;
             for (int k=0; k<maschartext.Length;k++)
             {
                 flag = false;
@@ -307,6 +306,91 @@ namespace Test
                 mastexcopy[i+1] = array[i];
             }
             mastexcopy[0] = temp;
+        }
+
+        private void расшифроватьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            decryptiontext2();
+        }
+        private void decryptiontext2()
+        {
+            char[,] mastext = new char[8, 9] {{'x','x','x','x','x','x','x','x','x'},{'x','з','д','р','а','в','о','м','ы'}, {'x','с','л','я','щ','и','й','б','г'},
+            {'x','е','ё','ж','к','н','п','т','у'}, {'x','ф','х','ц','ч','ш','ъ','ь','э'}, {'x','ю','+','-','/','*','.',',','!'}, 
+            {'x','?','(',')','@',' ',':','1','2'}, {'x','3','4','5','6','7','8','9','0'}};
+            string texted = DTextcript2.Text.ToLower();
+            string[] DText = texted.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string Keid = DKey2.Text.ToLower();
+            char[] mascharkey;
+            mascharkey = Keid.ToCharArray();
+            int RowKey;
+            int ColumnKey;
+            bool flag;
+            int[] LengthKey = new int[mascharkey.Length];
+            for (int k = 0; k < mascharkey.Length; k++)
+            {
+                flag = false;
+                RowKey = 0;
+                ColumnKey = 0;
+                for (int i = 1; i < 8; i++)
+                {
+                    for (int j = 1; j < 9; j++)
+                    {
+                        if (mastext[i, j] == mascharkey[k])
+                        {
+                            RowKey = i;
+                            ColumnKey = j;
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                        LengthKey[k] = int.Parse(RowKey.ToString() + ColumnKey.ToString());
+                        break;
+                    }
+                }
+            }
+            //
+            string num = null;
+            int p = 0;
+            for (int i = 0; i < DText.Length; i++)
+            {
+                if (p == mascharkey.Length)
+                    p = 0;
+                num += (int.Parse(DText[i]) - LengthKey[p]).ToString();
+                p++;
+            }
+            for (int t = 1; t < num.Length; t++)
+            {
+                num = num.Insert(t, " ");
+                ++t;
+            }
+            string[] numkey = num.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); ;
+            int[] rowkey = new int[DText.Length];
+            int[] columnkey = new int[DText.Length];
+            flag = true;
+            int r = 0;
+            int c = 0;
+            for (int j = 0; j < numkey.Length; j++)
+            {
+                if (flag)
+                {
+                    rowkey[r] = int.Parse(numkey[j]);
+                    flag = false;
+                    r++;
+                }
+                else
+                {
+                    columnkey[c] = int.Parse(numkey[j]);
+                    flag = true;
+                    c++;
+                }
+            }
+
+            for (int g = 0; g < DText.Length; g++)
+            {
+                DText2.Text += mastext[rowkey[g], columnkey[g]];
+            }
         }
     }
 }
