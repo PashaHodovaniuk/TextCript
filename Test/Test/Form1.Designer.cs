@@ -85,6 +85,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.расшифроватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DDecriptbut = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.FullCript.SuspendLayout();
             this.Cript1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -340,6 +342,7 @@
             // 
             // Cript3
             // 
+            this.Cript3.Controls.Add(this.DDecriptbut);
             this.Cript3.Controls.Add(this.label17);
             this.Cript3.Controls.Add(this.label16);
             this.Cript3.Controls.Add(this.label15);
@@ -562,10 +565,11 @@
             // 
             // DNumsdv
             // 
-            this.DNumsdv.Location = new System.Drawing.Point(322, 335);
+            this.DNumsdv.Location = new System.Drawing.Point(280, 335);
             this.DNumsdv.Name = "DNumsdv";
             this.DNumsdv.Size = new System.Drawing.Size(73, 20);
             this.DNumsdv.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.DNumsdv, "Введите число от 1 до 52");
             // 
             // label15
             // 
@@ -588,7 +592,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(322, 316);
+            this.label17.Location = new System.Drawing.Point(280, 316);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 13);
             this.label17.TabIndex = 12;
@@ -599,7 +603,7 @@
             this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.расшифроватьToolStripMenuItem1});
             this.contextMenuStrip6.Name = "contextMenuStrip6";
-            this.contextMenuStrip6.Size = new System.Drawing.Size(158, 48);
+            this.contextMenuStrip6.Size = new System.Drawing.Size(158, 26);
             // 
             // расшифроватьToolStripMenuItem1
             // 
@@ -607,6 +611,21 @@
             this.расшифроватьToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
             this.расшифроватьToolStripMenuItem1.Text = "Расшифровать";
             this.расшифроватьToolStripMenuItem1.Click += new System.EventHandler(this.расшифроватьToolStripMenuItem1_Click);
+            // 
+            // DDecriptbut
+            // 
+            this.DDecriptbut.Location = new System.Drawing.Point(377, 332);
+            this.DDecriptbut.Name = "DDecriptbut";
+            this.DDecriptbut.Size = new System.Drawing.Size(92, 23);
+            this.DDecriptbut.TabIndex = 13;
+            this.DDecriptbut.Text = "Расшифровать";
+            this.DDecriptbut.UseVisualStyleBackColor = true;
+            this.DDecriptbut.Click += new System.EventHandler(this.DDecriptbut_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Оповищение!";
             // 
             // CriptoText
             // 
@@ -691,6 +710,8 @@
         private System.Windows.Forms.TextBox DTextcript3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip6;
         private System.Windows.Forms.ToolStripMenuItem расшифроватьToolStripMenuItem1;
+        private System.Windows.Forms.Button DDecriptbut;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

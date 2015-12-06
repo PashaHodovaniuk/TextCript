@@ -222,16 +222,26 @@ namespace Test
         {
             int k = 0;
             k = int.Parse(Numsdv.Text);
-            if (k == 52)
+            if (k == 51)
             {
                 k = -1;
             }
             k++;
             Numsdv.Text = k.ToString();
+            bool flag = false;
+            if (k == 0)
+                flag = true;
+            if (flag)
+            {
+                Array.Copy(mastex, mastexcopy, mastex.Length);
+            }
+           
+            
             string texted = Text3.Text.ToLower();
             char[] maschartext;            
             maschartext = texted.ToCharArray();
-            arrayRotateLeft(mastexcopy);
+            if (!flag)
+                arrayRotateLeft(mastexcopy);
             int[] num = new int[maschartext.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
@@ -259,14 +269,22 @@ namespace Test
             k = int.Parse(Numsdv.Text);
             if (k == 0)
             {
-                k = 53;
+                k = 52;
             }
             k--;
             Numsdv.Text = k.ToString();
+            bool flag = false;
+            if (k == 0)
+                flag = true;
+            if (flag)
+            {
+                Array.Copy(mastex, mastexcopy, mastex.Length);
+            }
             string texted = Text3.Text.ToLower();
             char[] maschartext;
             maschartext = texted.ToCharArray();
-            arrayRotateRight(mastexcopy);
+            if (!flag)
+                arrayRotateRight(mastexcopy);
             int[] num = new int[maschartext.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
@@ -390,6 +408,54 @@ namespace Test
             for (int g = 0; g < DText.Length; g++)
             {
                 DText2.Text += mastext[rowkey[g], columnkey[g]];
+            }
+        }
+
+        private void DDecriptbut_Click(object sender, EventArgs e)
+        {
+            int Numsdv = int.Parse(DNumsdv.Text);
+            Array.Copy(mastex, mastexcopy, mastex.Length); 
+            if ((Numsdv > 0) && (Numsdv <= 52))
+            {                
+                arrayRotate(mastexcopy,Numsdv);
+                string texted = DTextcript3.Text.ToLower();
+                char[] maschartext;
+                maschartext = texted.ToCharArray();                
+                int[] num = new int[maschartext.Length];
+                for (int i = 0; i < maschartext.Length; i++)
+                {
+
+                    for (int p = 0; p < mastexcopy.Length; p++)
+                    {
+                        if (maschartext[i] == mastexcopy[p])
+                        {
+                            num[i] = p;
+                            break;
+                        }
+                    }
+                }
+                DText3.Text = null;
+                for (int i = 0; i < maschartext.Length; i++)
+                {
+                    DText3.Text += mastex[num[i]];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Вы ввели число не входящее в диапазон!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DNumsdv.Focus();
+            }
+        }
+        private void arrayRotate(char[] array, int size)
+        {            
+            for (int j = 0; j < size; j++)
+            {
+                char temp = array[0];
+                for (int i = 1; i < array.Length; i++)
+                {
+                    mastexcopy[i - 1] = array[i];
+                }
+                mastexcopy[array.Length - 1] = temp;
             }
         }
     }
