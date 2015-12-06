@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -47,8 +48,13 @@ namespace Test
 
         private void шифроварьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
             Textcript1.Clear();
             encrypriontext1();
+            timecript.Stop();
+            timecript1.Text = timecript.Elapsed.ToString();
+            timecript.Reset();
         }
 
         private void encrypriontext1()
@@ -70,7 +76,7 @@ namespace Test
             long[] num = new long[maskey.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
-                for (long k = 0; k < mastext.Length; k++)
+                for (long k = 0; k < mastext.Length-1; k++)
                 {
                     if (maschartext[i] == mastext[k])
                     {
@@ -190,7 +196,13 @@ namespace Test
 
         private void шифроватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
+            Textcript2.Clear();
             encrypriontext2();
+            timecript.Stop();
+            Timecript2.Text = timecript.Elapsed.ToString();
+            timecript.Reset();            
         }
 
         private void Text3_KeyPress(object sender, KeyPressEventArgs e)
@@ -210,7 +222,7 @@ namespace Test
                 Numsdv.Text = "0";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void encrypriontext31()
         {
             int k = 0;
             k = int.Parse(Numsdv.Text);
@@ -251,7 +263,8 @@ namespace Test
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void encrypriontext32()
         {
             int k = 0;
             k = int.Parse(Numsdv.Text);
@@ -291,7 +304,7 @@ namespace Test
                 Textcript3.Text += mastexcopy[num[i]];
             }
         }
-
+       
         public void arrayRotateLeft(char[] array)
         {
             char temp = array[0];
@@ -314,7 +327,14 @@ namespace Test
 
         private void расшифроватьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
+            DText2.Clear();
             decryptiontext2();
+            timecript.Stop();
+            TimeDecript2.Text = timecript.Elapsed.ToString();
+            timecript.Reset();  
+            
         }
 
         private void decryptiontext2()
@@ -395,10 +415,9 @@ namespace Test
                 DText2.Text += mastext[rowkey[g], columnkey[g]];
             }
         }
-
-        private void DDecriptbut_Click(object sender, EventArgs e)
+        private void decryptiontext3()
         {
-            int Numsdv = int.Parse(DNumsdv.Text);
+        int Numsdv = int.Parse(DNumsdv.Text);
             Array.Copy(mastex, mastexcopy, mastex.Length);
             if ((Numsdv > 0) && (Numsdv <= 52))
             {
@@ -429,7 +448,7 @@ namespace Test
                 MessageBox.Show("Вы ввели число не входящее в диапазон!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 DNumsdv.Focus();
             }
-        }
+    }
 
         private void arrayRotate(char[] array, int size)
         {
@@ -446,7 +465,13 @@ namespace Test
 
         private void расшифроватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
+            DText1.Clear();
             decryptiontext1();
+            timecript.Stop();
+            Timedecript1.Text = timecript.Elapsed.ToString();
+            timecript.Reset();            
         }
 
         private void decryptiontext1()
@@ -467,7 +492,7 @@ namespace Test
             }
             int key;
             int lenkey;
-            int[] dnum = new int[masdkey.Length];
+            int[] dnum = new int[maschardtext.Length];
             for (int i = 0; i < maschardtext.Length; i++)
             {
                 for (int k = 0; k < mastext.Length; k++)
@@ -495,5 +520,49 @@ namespace Test
                 DText1.Text += mastext[lenkey];
             }
         }
+
+        private void Text3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.V && e.Modifiers == Keys.Control)
+            {
+                IDataObject iData = Clipboard.GetDataObject();
+
+                if (iData.GetDataPresent(DataFormats.Text))
+                {
+                    Text3.Text = (String)iData.GetData(DataFormats.Text);
+                }
+                Textcript3.Text = Text3.Text;
+            }
+        }
+
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
+            encrypriontext31();
+            timecript.Stop();
+            Timecript3.Text = timecript.Elapsed.ToString();
+        }
+
+        private void button2_MouseUp(object sender, MouseEventArgs e)
+        {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
+            encrypriontext32();
+            timecript.Stop();
+            Timecript3.Text = timecript.Elapsed.ToString();
+        }
+
+        private void DDecriptbut_MouseUp(object sender, MouseEventArgs e)
+        {
+            Stopwatch timecript = new Stopwatch();
+            timecript.Start();
+            decryptiontext3();
+            timecript.Stop();
+            TimeDecript3.Text = timecript.Elapsed.ToString();
+            timecript.Reset();
+        }
+
+        
     }
 }

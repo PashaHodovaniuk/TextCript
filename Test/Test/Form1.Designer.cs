@@ -87,6 +87,18 @@
             this.расшифроватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.DDecriptbut = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label18 = new System.Windows.Forms.Label();
+            this.timecript1 = new System.Windows.Forms.Label();
+            this.Timedecript1 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TimeDecript2 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Timecript2 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TimeDecript3 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Timecript3 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.FullCript.SuspendLayout();
             this.Cript1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -112,6 +124,10 @@
             // 
             // Cript1
             // 
+            this.Cript1.Controls.Add(this.Timedecript1);
+            this.Cript1.Controls.Add(this.label20);
+            this.Cript1.Controls.Add(this.timecript1);
+            this.Cript1.Controls.Add(this.label18);
             this.Cript1.Controls.Add(this.label11);
             this.Cript1.Controls.Add(this.label10);
             this.Cript1.Controls.Add(this.label9);
@@ -208,29 +224,35 @@
             // Textcript1
             // 
             this.Textcript1.Location = new System.Drawing.Point(515, 52);
-            this.Textcript1.Multiline = true;
             this.Textcript1.Name = "Textcript1";
-            this.Textcript1.Size = new System.Drawing.Size(202, 103);
+            this.Textcript1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.Textcript1.Size = new System.Drawing.Size(202, 20);
             this.Textcript1.TabIndex = 2;
+            this.Textcript1.WordWrap = false;
             // 
             // Key1
             // 
             this.Key1.Location = new System.Drawing.Point(267, 52);
-            this.Key1.Multiline = true;
             this.Key1.Name = "Key1";
-            this.Key1.Size = new System.Drawing.Size(202, 103);
+            this.Key1.Size = new System.Drawing.Size(202, 20);
             this.Key1.TabIndex = 1;
+            this.Key1.WordWrap = false;
             // 
             // Text1
             // 
             this.Text1.Location = new System.Drawing.Point(24, 52);
             this.Text1.Multiline = true;
             this.Text1.Name = "Text1";
+            this.Text1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Text1.Size = new System.Drawing.Size(202, 103);
             this.Text1.TabIndex = 0;
             // 
             // Cript2
             // 
+            this.Cript2.Controls.Add(this.TimeDecript2);
+            this.Cript2.Controls.Add(this.label21);
+            this.Cript2.Controls.Add(this.Timecript2);
+            this.Cript2.Controls.Add(this.label23);
             this.Cript2.Controls.Add(this.label14);
             this.Cript2.Controls.Add(this.label13);
             this.Cript2.Controls.Add(this.label12);
@@ -319,9 +341,8 @@
             // Textcript2
             // 
             this.Textcript2.Location = new System.Drawing.Point(499, 51);
-            this.Textcript2.Multiline = true;
             this.Textcript2.Name = "Textcript2";
-            this.Textcript2.Size = new System.Drawing.Size(182, 93);
+            this.Textcript2.Size = new System.Drawing.Size(182, 20);
             this.Textcript2.TabIndex = 2;
             // 
             // Key2
@@ -337,11 +358,16 @@
             this.Text2.Location = new System.Drawing.Point(32, 51);
             this.Text2.Multiline = true;
             this.Text2.Name = "Text2";
+            this.Text2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Text2.Size = new System.Drawing.Size(182, 93);
             this.Text2.TabIndex = 0;
             // 
             // Cript3
             // 
+            this.Cript3.Controls.Add(this.TimeDecript3);
+            this.Cript3.Controls.Add(this.label22);
+            this.Cript3.Controls.Add(this.Timecript3);
+            this.Cript3.Controls.Add(this.label25);
             this.Cript3.Controls.Add(this.DDecriptbut);
             this.Cript3.Controls.Add(this.label17);
             this.Cript3.Controls.Add(this.label16);
@@ -400,7 +426,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button2_MouseUp);
             // 
             // button1
             // 
@@ -410,7 +436,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
             // 
             // Textcript3
             // 
@@ -418,6 +444,7 @@
             this.Textcript3.Multiline = true;
             this.Textcript3.Name = "Textcript3";
             this.Textcript3.ReadOnly = true;
+            this.Textcript3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Textcript3.Size = new System.Drawing.Size(164, 73);
             this.Textcript3.TabIndex = 1;
             // 
@@ -426,31 +453,35 @@
             this.Text3.Location = new System.Drawing.Point(159, 50);
             this.Text3.Multiline = true;
             this.Text3.Name = "Text3";
+            this.Text3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Text3.Size = new System.Drawing.Size(160, 73);
             this.Text3.TabIndex = 0;
+            this.Text3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Text3_KeyDown);
             this.Text3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text3_KeyPress);
             // 
             // Dtextcript1
             // 
             this.Dtextcript1.Location = new System.Drawing.Point(24, 245);
-            this.Dtextcript1.Multiline = true;
             this.Dtextcript1.Name = "Dtextcript1";
-            this.Dtextcript1.Size = new System.Drawing.Size(202, 96);
+            this.Dtextcript1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.Dtextcript1.Size = new System.Drawing.Size(202, 20);
             this.Dtextcript1.TabIndex = 6;
+            this.Dtextcript1.WordWrap = false;
             // 
             // DKey1
             // 
             this.DKey1.Location = new System.Drawing.Point(267, 245);
-            this.DKey1.Multiline = true;
             this.DKey1.Name = "DKey1";
-            this.DKey1.Size = new System.Drawing.Size(202, 96);
+            this.DKey1.Size = new System.Drawing.Size(202, 20);
             this.DKey1.TabIndex = 7;
+            this.DKey1.WordWrap = false;
             // 
             // DText1
             // 
             this.DText1.Location = new System.Drawing.Point(515, 245);
             this.DText1.Multiline = true;
             this.DText1.Name = "DText1";
+            this.DText1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DText1.Size = new System.Drawing.Size(202, 96);
             this.DText1.TabIndex = 8;
             // 
@@ -487,7 +518,7 @@
             this.contextMenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.расшифроватьToolStripMenuItem});
             this.contextMenuStrip5.Name = "contextMenuStrip5";
-            this.contextMenuStrip5.Size = new System.Drawing.Size(158, 48);
+            this.contextMenuStrip5.Size = new System.Drawing.Size(158, 26);
             // 
             // расшифроватьToolStripMenuItem
             // 
@@ -499,9 +530,8 @@
             // DTextcript2
             // 
             this.DTextcript2.Location = new System.Drawing.Point(32, 248);
-            this.DTextcript2.Multiline = true;
             this.DTextcript2.Name = "DTextcript2";
-            this.DTextcript2.Size = new System.Drawing.Size(182, 105);
+            this.DTextcript2.Size = new System.Drawing.Size(182, 20);
             this.DTextcript2.TabIndex = 6;
             // 
             // DKey2
@@ -517,6 +547,7 @@
             this.DText2.Location = new System.Drawing.Point(499, 248);
             this.DText2.Multiline = true;
             this.DText2.Name = "DText2";
+            this.DText2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DText2.Size = new System.Drawing.Size(182, 105);
             this.DText2.TabIndex = 8;
             // 
@@ -553,6 +584,7 @@
             this.DTextcript3.Location = new System.Drawing.Point(159, 217);
             this.DTextcript3.Multiline = true;
             this.DTextcript3.Name = "DTextcript3";
+            this.DTextcript3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DTextcript3.Size = new System.Drawing.Size(160, 92);
             this.DTextcript3.TabIndex = 7;
             // 
@@ -561,6 +593,7 @@
             this.DText3.Location = new System.Drawing.Point(387, 217);
             this.DText3.Multiline = true;
             this.DText3.Name = "DText3";
+            this.DText3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DText3.Size = new System.Drawing.Size(160, 92);
             this.DText3.TabIndex = 8;
             // 
@@ -621,12 +654,114 @@
             this.DDecriptbut.TabIndex = 13;
             this.DDecriptbut.Text = "Расшифровать";
             this.DDecriptbut.UseVisualStyleBackColor = true;
-            this.DDecriptbut.Click += new System.EventHandler(this.DDecriptbut_Click);
+            this.DDecriptbut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DDecriptbut_MouseUp);
             // 
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Оповищение!";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(512, 162);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 13);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Time cript";
+            // 
+            // timecript1
+            // 
+            this.timecript1.AutoSize = true;
+            this.timecript1.Location = new System.Drawing.Point(602, 162);
+            this.timecript1.Name = "timecript1";
+            this.timecript1.Size = new System.Drawing.Size(0, 13);
+            this.timecript1.TabIndex = 13;
+            // 
+            // Timedecript1
+            // 
+            this.Timedecript1.AutoSize = true;
+            this.Timedecript1.Location = new System.Drawing.Point(602, 206);
+            this.Timedecript1.Name = "Timedecript1";
+            this.Timedecript1.Size = new System.Drawing.Size(0, 13);
+            this.Timedecript1.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(512, 206);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(67, 13);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Time Decript";
+            // 
+            // TimeDecript2
+            // 
+            this.TimeDecript2.AutoSize = true;
+            this.TimeDecript2.Location = new System.Drawing.Point(586, 207);
+            this.TimeDecript2.Name = "TimeDecript2";
+            this.TimeDecript2.Size = new System.Drawing.Size(0, 13);
+            this.TimeDecript2.TabIndex = 19;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(496, 207);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(67, 13);
+            this.label21.TabIndex = 18;
+            this.label21.Text = "Time Decript";
+            // 
+            // Timecript2
+            // 
+            this.Timecript2.AutoSize = true;
+            this.Timecript2.Location = new System.Drawing.Point(586, 163);
+            this.Timecript2.Name = "Timecript2";
+            this.Timecript2.Size = new System.Drawing.Size(0, 13);
+            this.Timecript2.TabIndex = 17;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(496, 163);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(53, 13);
+            this.label23.TabIndex = 16;
+            this.label23.Text = "Time cript";
+            // 
+            // TimeDecript3
+            // 
+            this.TimeDecript3.AutoSize = true;
+            this.TimeDecript3.Location = new System.Drawing.Point(574, 184);
+            this.TimeDecript3.Name = "TimeDecript3";
+            this.TimeDecript3.Size = new System.Drawing.Size(0, 13);
+            this.TimeDecript3.TabIndex = 23;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(484, 184);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(67, 13);
+            this.label22.TabIndex = 22;
+            this.label22.Text = "Time Decript";
+            // 
+            // Timecript3
+            // 
+            this.Timecript3.AutoSize = true;
+            this.Timecript3.Location = new System.Drawing.Point(574, 140);
+            this.Timecript3.Name = "Timecript3";
+            this.Timecript3.Size = new System.Drawing.Size(0, 13);
+            this.Timecript3.TabIndex = 21;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(484, 140);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 13);
+            this.label25.TabIndex = 20;
+            this.label25.Text = "Time cript";
             // 
             // CriptoText
             // 
@@ -713,6 +848,18 @@
         private System.Windows.Forms.ToolStripMenuItem расшифроватьToolStripMenuItem1;
         private System.Windows.Forms.Button DDecriptbut;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label timecript1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label Timedecript1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label TimeDecript2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label Timecript2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label TimeDecript3;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label Timecript3;
+        private System.Windows.Forms.Label label25;
     }
 }
 
