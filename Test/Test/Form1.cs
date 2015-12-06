@@ -18,11 +18,10 @@ namespace Test
         char[] mastexcopy = new char[] { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
                 'р', 'с', 'т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я','*','/','+','-','.',',','?','!',' ','0','1','2',
                 '3','4','5','6','7','8','9'};
-        
+
         public CriptoText()
         {
-            InitializeComponent();            
-            
+            InitializeComponent();
         }
 
         private void генерироватьКлючToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,7 +70,6 @@ namespace Test
             long[] num = new long[maskey.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
-
                 for (long k = 0; k < mastext.Length; k++)
                 {
                     if (maschartext[i] == mastext[k])
@@ -81,7 +79,6 @@ namespace Test
                     }
                 }
             }
-
             key = 0;
             for (int j = 0; j < maskey.Length; j++)
             {
@@ -96,7 +93,6 @@ namespace Test
                 }
                 Textcript1.Text += mastext[lenkey] + " ";
             }
-
         }
 
         private void очиститьToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -133,7 +129,7 @@ namespace Test
             int[] LengthKey = new int[mascharkey.Length];
             int[] Key = new int[maschartext.Length];
             bool flag;
-            for (int k=0; k<maschartext.Length;k++)
+            for (int k = 0; k < maschartext.Length; k++)
             {
                 flag = false;
                 RowText = 0;
@@ -155,9 +151,7 @@ namespace Test
                         LengthText[k] = int.Parse(RowText.ToString() + ColumnText.ToString());
                         break;
                     }
-
                 }
-                 
             }
             for (int k = 0; k < mascharkey.Length; k++)
             {
@@ -178,11 +172,10 @@ namespace Test
                     }
                     if (flag)
                     {
-                        LengthKey[k] = int.Parse(RowKey.ToString() + ColumnKey.ToString());                        
+                        LengthKey[k] = int.Parse(RowKey.ToString() + ColumnKey.ToString());
                         break;
                     }
                 }
-                
             }
             int p = 0;
             for (int i = 0; i < maschartext.Length; i++)
@@ -202,7 +195,6 @@ namespace Test
 
         private void Text3_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             if (e.KeyChar == (char)Keys.Back)
             {
                 if (Textcript3.TextLength >= 1)
@@ -235,17 +227,14 @@ namespace Test
             {
                 Array.Copy(mastex, mastexcopy, mastex.Length);
             }
-           
-            
             string texted = Text3.Text.ToLower();
-            char[] maschartext;            
+            char[] maschartext;
             maschartext = texted.ToCharArray();
             if (!flag)
                 arrayRotateLeft(mastexcopy);
             int[] num = new int[maschartext.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
-
                 for (int p = 0; p < mastex.Length; p++)
                 {
                     if (maschartext[i] == mastex[p])
@@ -260,7 +249,6 @@ namespace Test
             {
                 Textcript3.Text += mastexcopy[num[i]];
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -288,7 +276,6 @@ namespace Test
             int[] num = new int[maschartext.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
-
                 for (int p = 0; p < mastex.Length; p++)
                 {
                     if (maschartext[i] == mastex[p])
@@ -303,25 +290,24 @@ namespace Test
             {
                 Textcript3.Text += mastexcopy[num[i]];
             }
-
         }
-       
-        public void arrayRotateLeft(char[] array) 
-        {            
+
+        public void arrayRotateLeft(char[] array)
+        {
             char temp = array[0];
             for (int i = 1; i < array.Length; i++)
             {
-                mastexcopy[i-1] = array[i];
+                mastexcopy[i - 1] = array[i];
             }
             mastexcopy[array.Length - 1] = temp;
         }
 
         public void arrayRotateRight(char[] array)
         {
-            char temp = array[array.Length-1];
+            char temp = array[array.Length - 1];
             for (int i = array.Length - 2; i >= 0; i--)
             {
-                mastexcopy[i+1] = array[i];
+                mastexcopy[i + 1] = array[i];
             }
             mastexcopy[0] = temp;
         }
@@ -330,6 +316,7 @@ namespace Test
         {
             decryptiontext2();
         }
+
         private void decryptiontext2()
         {
             char[,] mastext = new char[8, 9] {{'x','x','x','x','x','x','x','x','x'},{'x','з','д','р','а','в','о','м','ы'}, {'x','с','л','я','щ','и','й','б','г'},
@@ -368,7 +355,6 @@ namespace Test
                     }
                 }
             }
-            //
             string num = null;
             int p = 0;
             for (int i = 0; i < DText.Length; i++)
@@ -404,7 +390,6 @@ namespace Test
                     c++;
                 }
             }
-
             for (int g = 0; g < DText.Length; g++)
             {
                 DText2.Text += mastext[rowkey[g], columnkey[g]];
@@ -414,17 +399,16 @@ namespace Test
         private void DDecriptbut_Click(object sender, EventArgs e)
         {
             int Numsdv = int.Parse(DNumsdv.Text);
-            Array.Copy(mastex, mastexcopy, mastex.Length); 
+            Array.Copy(mastex, mastexcopy, mastex.Length);
             if ((Numsdv > 0) && (Numsdv <= 52))
-            {                
-                arrayRotate(mastexcopy,Numsdv);
+            {
+                arrayRotate(mastexcopy, Numsdv);
                 string texted = DTextcript3.Text.ToLower();
                 char[] maschartext;
-                maschartext = texted.ToCharArray();                
+                maschartext = texted.ToCharArray();
                 int[] num = new int[maschartext.Length];
                 for (int i = 0; i < maschartext.Length; i++)
                 {
-
                     for (int p = 0; p < mastexcopy.Length; p++)
                     {
                         if (maschartext[i] == mastexcopy[p])
@@ -446,8 +430,9 @@ namespace Test
                 DNumsdv.Focus();
             }
         }
+
         private void arrayRotate(char[] array, int size)
-        {            
+        {
             for (int j = 0; j < size; j++)
             {
                 char temp = array[0];
