@@ -99,19 +99,30 @@
             this.Textcript3 = new System.Windows.Forms.TextBox();
             this.Text3 = new System.Windows.Forms.TextBox();
             this.Stegano1 = new System.Windows.Forms.TabPage();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.OpenImg = new System.Windows.Forms.Button();
-            this.Metod1 = new System.Windows.Forms.Button();
-            this.Metod2 = new System.Windows.Forms.Button();
-            this.Metod3 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Metod3 = new System.Windows.Forms.Button();
+            this.Metod2 = new System.Windows.Forms.Button();
+            this.Metod1 = new System.Windows.Forms.Button();
+            this.OpenImg = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.Metod13 = new System.Windows.Forms.Button();
+            this.Metod12 = new System.Windows.Forms.Button();
+            this.Metod11 = new System.Windows.Forms.Button();
+            this.Openimg2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.FullCript.SuspendLayout();
             this.Cript1.SuspendLayout();
             this.contextMenuStrip5.SuspendLayout();
@@ -124,6 +135,8 @@
             this.Cript3.SuspendLayout();
             this.Stegano1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // FullCript
@@ -132,6 +145,7 @@
             this.FullCript.Controls.Add(this.Cript2);
             this.FullCript.Controls.Add(this.Cript3);
             this.FullCript.Controls.Add(this.Stegano1);
+            this.FullCript.Controls.Add(this.tabPage1);
             this.FullCript.Location = new System.Drawing.Point(12, 12);
             this.FullCript.Name = "FullCript";
             this.FullCript.SelectedIndex = 0;
@@ -794,81 +808,14 @@
             this.Stegano1.Text = "Stegano1";
             this.Stegano1.UseVisualStyleBackColor = true;
             // 
-            // toolTip1
+            // label19
             // 
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Оповищение!";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(24, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(431, 338);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // OpenImg
-            // 
-            this.OpenImg.Location = new System.Drawing.Point(477, 21);
-            this.OpenImg.Name = "OpenImg";
-            this.OpenImg.Size = new System.Drawing.Size(247, 29);
-            this.OpenImg.TabIndex = 1;
-            this.OpenImg.Text = "Открыть картинку";
-            this.OpenImg.UseVisualStyleBackColor = true;
-            this.OpenImg.Click += new System.EventHandler(this.OpenImg_Click);
-            // 
-            // Metod1
-            // 
-            this.Metod1.Location = new System.Drawing.Point(477, 56);
-            this.Metod1.Name = "Metod1";
-            this.Metod1.Size = new System.Drawing.Size(247, 28);
-            this.Metod1.TabIndex = 2;
-            this.Metod1.Text = "Метод 1";
-            this.Metod1.UseVisualStyleBackColor = true;
-            this.Metod1.Click += new System.EventHandler(this.Metod1_Click);
-            // 
-            // Metod2
-            // 
-            this.Metod2.Location = new System.Drawing.Point(477, 90);
-            this.Metod2.Name = "Metod2";
-            this.Metod2.Size = new System.Drawing.Size(247, 27);
-            this.Metod2.TabIndex = 3;
-            this.Metod2.Text = "Метод 2";
-            this.Metod2.UseVisualStyleBackColor = true;
-            this.Metod2.Click += new System.EventHandler(this.Metod2_Click);
-            // 
-            // Metod3
-            // 
-            this.Metod3.Location = new System.Drawing.Point(477, 123);
-            this.Metod3.Name = "Metod3";
-            this.Metod3.Size = new System.Drawing.Size(247, 25);
-            this.Metod3.TabIndex = 4;
-            this.Metod3.Text = "Метод 3";
-            this.Metod3.UseVisualStyleBackColor = true;
-            this.Metod3.Click += new System.EventHandler(this.Metod3_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "BMP files (*.bmp)|*.bmp";
-            this.openFileDialog1.RestoreDirectory = true;
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileName = "Encr";
-            this.saveFileDialog1.Filter = "BMP files (*.bmp)|*.bmp";
-            this.saveFileDialog1.RestoreDirectory = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(477, 154);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(247, 26);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Сохранить картинку";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(477, 207);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(74, 13);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Дешифровка";
             // 
             // button4
             // 
@@ -900,14 +847,199 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label19
+            // button3
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(477, 207);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(74, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "Дешифровка";
+            this.button3.Location = new System.Drawing.Point(477, 154);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(247, 26);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Сохранить картинку";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Metod3
+            // 
+            this.Metod3.Location = new System.Drawing.Point(477, 123);
+            this.Metod3.Name = "Metod3";
+            this.Metod3.Size = new System.Drawing.Size(247, 25);
+            this.Metod3.TabIndex = 4;
+            this.Metod3.Text = "Метод 3";
+            this.Metod3.UseVisualStyleBackColor = true;
+            this.Metod3.Click += new System.EventHandler(this.Metod3_Click);
+            // 
+            // Metod2
+            // 
+            this.Metod2.Location = new System.Drawing.Point(477, 90);
+            this.Metod2.Name = "Metod2";
+            this.Metod2.Size = new System.Drawing.Size(247, 27);
+            this.Metod2.TabIndex = 3;
+            this.Metod2.Text = "Метод 2";
+            this.Metod2.UseVisualStyleBackColor = true;
+            this.Metod2.Click += new System.EventHandler(this.Metod2_Click);
+            // 
+            // Metod1
+            // 
+            this.Metod1.Location = new System.Drawing.Point(477, 56);
+            this.Metod1.Name = "Metod1";
+            this.Metod1.Size = new System.Drawing.Size(247, 28);
+            this.Metod1.TabIndex = 2;
+            this.Metod1.Text = "Метод 1";
+            this.Metod1.UseVisualStyleBackColor = true;
+            this.Metod1.Click += new System.EventHandler(this.Metod1_Click);
+            // 
+            // OpenImg
+            // 
+            this.OpenImg.Location = new System.Drawing.Point(477, 21);
+            this.OpenImg.Name = "OpenImg";
+            this.OpenImg.Size = new System.Drawing.Size(247, 29);
+            this.OpenImg.TabIndex = 1;
+            this.OpenImg.Text = "Открыть картинку";
+            this.OpenImg.UseVisualStyleBackColor = true;
+            this.OpenImg.Click += new System.EventHandler(this.OpenImg_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(24, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(431, 338);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Оповищение!";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "BMP files (*.bmp)|*.bmp";
+            this.openFileDialog1.RestoreDirectory = true;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Encr";
+            this.saveFileDialog1.Filter = "BMP files (*.bmp)|*.bmp";
+            this.saveFileDialog1.RestoreDirectory = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label24);
+            this.tabPage1.Controls.Add(this.button7);
+            this.tabPage1.Controls.Add(this.button8);
+            this.tabPage1.Controls.Add(this.button9);
+            this.tabPage1.Controls.Add(this.button10);
+            this.tabPage1.Controls.Add(this.Metod13);
+            this.tabPage1.Controls.Add(this.Metod12);
+            this.tabPage1.Controls.Add(this.Metod11);
+            this.tabPage1.Controls.Add(this.Openimg2);
+            this.tabPage1.Controls.Add(this.pictureBox2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(747, 382);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Stegano2";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(476, 208);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(74, 13);
+            this.label24.TabIndex = 19;
+            this.label24.Text = "Дешифровка";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(476, 294);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(247, 25);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "Метод 3";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(476, 261);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(247, 27);
+            this.button8.TabIndex = 17;
+            this.button8.Text = "Метод 2";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(476, 227);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(247, 28);
+            this.button9.TabIndex = 16;
+            this.button9.Text = "Метод 1";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(476, 155);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(247, 26);
+            this.button10.TabIndex = 15;
+            this.button10.Text = "Сохранить картинку";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // Metod13
+            // 
+            this.Metod13.Location = new System.Drawing.Point(476, 124);
+            this.Metod13.Name = "Metod13";
+            this.Metod13.Size = new System.Drawing.Size(247, 25);
+            this.Metod13.TabIndex = 14;
+            this.Metod13.Text = "Метод 3";
+            this.Metod13.UseVisualStyleBackColor = true;
+            this.Metod13.Click += new System.EventHandler(this.Metod13_Click);
+            // 
+            // Metod12
+            // 
+            this.Metod12.Location = new System.Drawing.Point(476, 91);
+            this.Metod12.Name = "Metod12";
+            this.Metod12.Size = new System.Drawing.Size(247, 27);
+            this.Metod12.TabIndex = 13;
+            this.Metod12.Text = "Метод 2";
+            this.Metod12.UseVisualStyleBackColor = true;
+            this.Metod12.Click += new System.EventHandler(this.Metod12_Click);
+            // 
+            // Metod11
+            // 
+            this.Metod11.Location = new System.Drawing.Point(476, 57);
+            this.Metod11.Name = "Metod11";
+            this.Metod11.Size = new System.Drawing.Size(247, 28);
+            this.Metod11.TabIndex = 12;
+            this.Metod11.Text = "Метод 1";
+            this.Metod11.UseVisualStyleBackColor = true;
+            this.Metod11.Click += new System.EventHandler(this.Metod11_Click);
+            // 
+            // Openimg2
+            // 
+            this.Openimg2.Location = new System.Drawing.Point(476, 22);
+            this.Openimg2.Name = "Openimg2";
+            this.Openimg2.Size = new System.Drawing.Size(247, 29);
+            this.Openimg2.TabIndex = 11;
+            this.Openimg2.Text = "Открыть картинку";
+            this.Openimg2.UseVisualStyleBackColor = true;
+            this.Openimg2.Click += new System.EventHandler(this.Openimg2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(23, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(431, 338);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // CriptoText
             // 
@@ -933,6 +1065,9 @@
             this.Stegano1.ResumeLayout(false);
             this.Stegano1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1022,6 +1157,17 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Metod13;
+        private System.Windows.Forms.Button Metod12;
+        private System.Windows.Forms.Button Metod11;
+        private System.Windows.Forms.Button Openimg2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -16,7 +16,7 @@ namespace Test
     public partial class CriptoText : Form
     {
         string rFile;
-        Bitmap bPic;
+        Bitmap bPic, bPic1;
         char[] mastex = new char[] { 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п',
                 'р', 'с', 'т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я','*','/','+','-','.',',','?','!',' ','0','1','2',
                 '3','4','5','6','7','8','9'};
@@ -878,6 +878,86 @@ namespace Test
         private void button4_Click(object sender, EventArgs e)
         {
             string temp = DStefanograf1();
+            DTextcript3.Text = temp;
+        }
+
+        private void Openimg2_Click(object sender, EventArgs e)
+        {
+            Stream myStream = null;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            rFile = openFileDialog1.FileName.ToString();
+                            bPic1 = new Bitmap(rFile);
+                            pictureBox1.Image = bPic1;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                bPic1.Save(saveFileDialog1.FileName);
+                return;
+            }
+        }
+
+        private void Metod11_Click(object sender, EventArgs e)
+        {
+            string temp = Textcript1.Text;
+            Steganograf2(temp);
+        }
+
+        private void Steganograf2(string rText)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Metod12_Click(object sender, EventArgs e)
+        {
+            string temp = Textcript2.Text;
+            Steganograf2(temp);
+        }
+
+        private void Metod13_Click(object sender, EventArgs e)
+        {
+            string temp = Textcript3.Text;
+            Steganograf2(temp);
+        }
+
+        private string DStefanograf2()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string temp = DStefanograf2();
+            Dtextcript1.Text = temp;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string temp = DStefanograf2();
+            DTextcript2.Text = temp;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string temp = DStefanograf2();
             DTextcript3.Text = temp;
         }
     }
