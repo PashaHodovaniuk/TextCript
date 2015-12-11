@@ -98,8 +98,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Textcript3 = new System.Windows.Forms.TextBox();
             this.Text3 = new System.Windows.Forms.TextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Stegano1 = new System.Windows.Forms.TabPage();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.OpenImg = new System.Windows.Forms.Button();
+            this.Metod1 = new System.Windows.Forms.Button();
+            this.Metod2 = new System.Windows.Forms.Button();
+            this.Metod3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.FullCript.SuspendLayout();
             this.Cript1.SuspendLayout();
             this.contextMenuStrip5.SuspendLayout();
@@ -110,6 +122,8 @@
             this.contextMenuStrip4.SuspendLayout();
             this.contextMenuStrip3.SuspendLayout();
             this.Cript3.SuspendLayout();
+            this.Stegano1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FullCript
@@ -760,13 +774,18 @@
             this.Text3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Text3_KeyDown);
             this.Text3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text3_KeyPress);
             // 
-            // toolTip1
-            // 
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Оповищение!";
-            // 
             // Stegano1
             // 
+            this.Stegano1.Controls.Add(this.label19);
+            this.Stegano1.Controls.Add(this.button4);
+            this.Stegano1.Controls.Add(this.button5);
+            this.Stegano1.Controls.Add(this.button6);
+            this.Stegano1.Controls.Add(this.button3);
+            this.Stegano1.Controls.Add(this.Metod3);
+            this.Stegano1.Controls.Add(this.Metod2);
+            this.Stegano1.Controls.Add(this.Metod1);
+            this.Stegano1.Controls.Add(this.OpenImg);
+            this.Stegano1.Controls.Add(this.pictureBox1);
             this.Stegano1.Location = new System.Drawing.Point(4, 22);
             this.Stegano1.Name = "Stegano1";
             this.Stegano1.Padding = new System.Windows.Forms.Padding(3);
@@ -774,6 +793,118 @@
             this.Stegano1.TabIndex = 3;
             this.Stegano1.Text = "Stegano1";
             this.Stegano1.UseVisualStyleBackColor = true;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Оповищение!";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(24, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(431, 338);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // OpenImg
+            // 
+            this.OpenImg.Location = new System.Drawing.Point(477, 21);
+            this.OpenImg.Name = "OpenImg";
+            this.OpenImg.Size = new System.Drawing.Size(247, 29);
+            this.OpenImg.TabIndex = 1;
+            this.OpenImg.Text = "Открыть картинку";
+            this.OpenImg.UseVisualStyleBackColor = true;
+            this.OpenImg.Click += new System.EventHandler(this.OpenImg_Click);
+            // 
+            // Metod1
+            // 
+            this.Metod1.Location = new System.Drawing.Point(477, 56);
+            this.Metod1.Name = "Metod1";
+            this.Metod1.Size = new System.Drawing.Size(247, 28);
+            this.Metod1.TabIndex = 2;
+            this.Metod1.Text = "Метод 1";
+            this.Metod1.UseVisualStyleBackColor = true;
+            this.Metod1.Click += new System.EventHandler(this.Metod1_Click);
+            // 
+            // Metod2
+            // 
+            this.Metod2.Location = new System.Drawing.Point(477, 90);
+            this.Metod2.Name = "Metod2";
+            this.Metod2.Size = new System.Drawing.Size(247, 27);
+            this.Metod2.TabIndex = 3;
+            this.Metod2.Text = "Метод 2";
+            this.Metod2.UseVisualStyleBackColor = true;
+            this.Metod2.Click += new System.EventHandler(this.Metod2_Click);
+            // 
+            // Metod3
+            // 
+            this.Metod3.Location = new System.Drawing.Point(477, 123);
+            this.Metod3.Name = "Metod3";
+            this.Metod3.Size = new System.Drawing.Size(247, 25);
+            this.Metod3.TabIndex = 4;
+            this.Metod3.Text = "Метод 3";
+            this.Metod3.UseVisualStyleBackColor = true;
+            this.Metod3.Click += new System.EventHandler(this.Metod3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "BMP files (*.bmp)|*.bmp";
+            this.openFileDialog1.RestoreDirectory = true;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Encr";
+            this.saveFileDialog1.Filter = "BMP files (*.bmp)|*.bmp";
+            this.saveFileDialog1.RestoreDirectory = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(477, 154);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(247, 26);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Сохранить картинку";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(477, 293);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(247, 25);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Метод 3";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(477, 260);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(247, 27);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Метод 2";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(477, 226);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(247, 28);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Метод 1";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(477, 207);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(74, 13);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Дешифровка";
             // 
             // CriptoText
             // 
@@ -796,6 +927,9 @@
             this.contextMenuStrip3.ResumeLayout(false);
             this.Cript3.ResumeLayout(false);
             this.Cript3.PerformLayout();
+            this.Stegano1.ResumeLayout(false);
+            this.Stegano1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -873,6 +1007,18 @@
         private System.Windows.Forms.Label Timecript3;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TabPage Stegano1;
+        private System.Windows.Forms.Button OpenImg;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Metod3;
+        private System.Windows.Forms.Button Metod2;
+        private System.Windows.Forms.Button Metod1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
