@@ -80,7 +80,7 @@ namespace Test
             long[] num = new long[maskey.Length];
             for (int i = 0; i < maschartext.Length; i++)
             {
-                for (long k = 0; k < mastext.Length-1; k++)
+                for (long k = 0; k < mastext.Length - 1; k++)
                 {
                     if (maschartext[i] == mastext[k])
                     {
@@ -206,7 +206,7 @@ namespace Test
             encrypriontext2();
             timecript.Stop();
             Timecript2.Text = timecript.Elapsed.ToString();
-            timecript.Reset();            
+            timecript.Reset();
         }
 
         private void Text3_KeyPress(object sender, KeyPressEventArgs e)
@@ -308,7 +308,7 @@ namespace Test
                 Textcript3.Text += mastexcopy[num[i]];
             }
         }
-       
+
         public void arrayRotateLeft(char[] array)
         {
             char temp = array[0];
@@ -337,8 +337,8 @@ namespace Test
             decryptiontext2();
             timecript.Stop();
             TimeDecript2.Text = timecript.Elapsed.ToString();
-            timecript.Reset();  
-            
+            timecript.Reset();
+
         }
 
         private void decryptiontext2()
@@ -421,7 +421,7 @@ namespace Test
         }
         private void decryptiontext3()
         {
-        int Numsdv = int.Parse(DNumsdv.Text);
+            int Numsdv = int.Parse(DNumsdv.Text);
             Array.Copy(mastex, mastexcopy, mastex.Length);
             if ((Numsdv > 0) && (Numsdv <= 52))
             {
@@ -452,7 +452,7 @@ namespace Test
                 MessageBox.Show("Вы ввели число не входящее в диапазон!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 DNumsdv.Focus();
             }
-    }
+        }
 
         private void arrayRotate(char[] array, int size)
         {
@@ -475,7 +475,7 @@ namespace Test
             decryptiontext1();
             timecript.Stop();
             Timedecript1.Text = timecript.Elapsed.ToString();
-            timecript.Reset();            
+            timecript.Reset();
         }
 
         private void decryptiontext1()
@@ -700,17 +700,14 @@ namespace Test
             return Convert.ToInt32(m, 10);
         }
 
-        private void Steganograf1(Stream rText)
+        private void Steganograf1(string rText)
         {
-            BinaryReader bText = new BinaryReader(rText, Encoding.ASCII);
+          byte[] bText = Encoding.Unicode.GetBytes(rText);           
 
             List<byte> bList = new List<byte>();
-            while (bText.PeekChar() != -1)
-            {
-                bList.Add(bText.ReadByte());
-            }
-            int CountText = bList.Count;
-            bText.Close();
+            
+            bList = bText.ToList();
+            int CountText = bList.Count;          
 
             if (CountText > ((bPic.Width * bPic.Height)) - 4)
             {
@@ -793,9 +790,7 @@ namespace Test
         private void Metod1_Click(object sender, EventArgs e)
         {
             string text = Textcript1.Text;
-            byte[] temp = Encoding.Unicode.GetBytes(text);
-            Stream stream = new MemoryStream(temp);
-            Steganograf1(stream);
+            Steganograf1(text);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -810,17 +805,81 @@ namespace Test
         private void Metod2_Click(object sender, EventArgs e)
         {
             string text = Textcript2.Text;
-            byte[] temp = Encoding.Unicode.GetBytes(text);
-            Stream stream = new MemoryStream(temp);
-            Steganograf1(stream);
+            Steganograf1(text);
         }
 
         private void Metod3_Click(object sender, EventArgs e)
         {
             string text = Textcript3.Text;
-            byte[] temp = Encoding.Unicode.GetBytes(text);
-            Stream stream = new MemoryStream(temp);
-            Steganograf1(stream);
+            Steganograf1(text);
+        }
+
+        private string DStefanograf1()
+        {
+            if (!isEncryption(bPic))
+            {
+                MessageBox.Show("В файле нет зашифрованной информации", "Информация", MessageBoxButtons.OK);
+                return "err";
+            }
+            
+            int countSymbol = ReadCountText(bPic); //считали количество  символов
+            byte[] message = new byte[countSymbol];
+            int index = 0;
+            bool st = false;
+            for (int i = 4; i < bPic.Width; i++)
+            {
+                for (int j = 0; j < bPic.Height; j++)
+                {
+                    Color pixelColor = bPic.GetPixel(i, j);
+                    if (index == message.Length)
+                    {
+                        st = true;
+                        break;
+                    }
+                    BitArray colorArray = ByteToBit(pixelColor.R);
+                    BitArray messageArray = ByteToBit(pixelColor.R); ;
+                    messageArray[0] = colorArray[0];
+                    messageArray[1] = colorArray[1];
+
+                    colorArray = ByteToBit(pixelColor.G);
+                    messageArray[2] = colorArray[0];
+                    messageArray[3] = colorArray[1];
+                    messageArray[4] = colorArray[2];
+
+                    colorArray = ByteToBit(pixelColor.B);
+                    messageArray[5] = colorArray[0];
+                    messageArray[6] = colorArray[1];
+                    messageArray[7] = colorArray[2];
+                    message[index] = BitToByte(messageArray);
+                    index++;
+                }
+                if (st)
+                {
+                    break;
+                }
+            }
+            string temp = Encoding.Unicode.GetString(message);
+            string strMessage = Encoding.GetEncoding(1251).GetString(message);
+            return temp;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string temp = DStefanograf1();
+            Dtextcript1.Text = temp;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string temp = DStefanograf1();
+            DTextcript2.Text = temp;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string temp = DStefanograf1();
+            DTextcript3.Text = temp;
         }
     }
 }
+   
