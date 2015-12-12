@@ -977,12 +977,10 @@ namespace Test
             bool flag = true;
             while (flag)
             {
-
                 if (height > bPic1.Height)
                 {
                     height = 0;
                     width++;
-
                 }
 
                 Color pixelColor = bPic1.GetPixel(width, height);
@@ -1006,14 +1004,20 @@ namespace Test
 
                 Color newColor = Color.FromArgb(newR, newG, newB);
                 bPic1.SetPixel(width, height, newColor);
-                height += bList[index];
+
+                if (bList[index] == 0)
+                    height++;
+                else
+                {
+                    height += bList[index];
+                }
                 index++;
+
                 if (index == bList.Count)
                 {
                     flag = false;
                 }
-            }              
-        
+            } 
         }
 
         private void Metod11_Click(object sender, EventArgs e)
@@ -1036,7 +1040,59 @@ namespace Test
 
         private string DStefanograf2()
         {
-            throw new NotImplementedException();
+            if (!isEncryption(bPic1))
+            {
+                MessageBox.Show("В файле нет зашифрованной информации", "Информация", MessageBoxButtons.OK);
+                return "err";
+            }
+
+            int countSymbol = ReadCountText(bPic1); //считали количество  символов
+            byte[] message = new byte[countSymbol];
+            int index = 0;
+            int height = 0;
+            int width = 4;
+            bool flag = true;
+            while (flag)
+            {
+
+                if (height > bPic1.Height)
+                {
+                    height = 0;
+                    width++;
+                }
+
+                Color pixelColor = bPic1.GetPixel(width, height);
+                BitArray colorArray = ByteToBit(pixelColor.R);
+                BitArray messageArray = ByteToBit(pixelColor.R); ;
+                messageArray[0] = colorArray[0];
+                messageArray[1] = colorArray[1];
+
+                colorArray = ByteToBit(pixelColor.G);
+                messageArray[2] = colorArray[0];
+                messageArray[3] = colorArray[1];
+                messageArray[4] = colorArray[2];
+
+                colorArray = ByteToBit(pixelColor.B);
+                messageArray[5] = colorArray[0];
+                messageArray[6] = colorArray[1];
+                messageArray[7] = colorArray[2];
+                message[index] = BitToByte(messageArray);
+
+                if (message[index] == 0)
+                    height++;
+                else
+                {
+                    height += message[index];
+                }
+                index++;
+
+                if (index == message.Length)
+                {
+                    flag = false;
+                }
+            }
+            string temp = Encoding.Unicode.GetString(message);
+            return temp;
         }
 
         private void button9_Click(object sender, EventArgs e)
