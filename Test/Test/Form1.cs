@@ -647,7 +647,15 @@ namespace Test
 
         private void WriteCountText(int count, Bitmap src)
         {
-            byte[] CountSymbols = Encoding.GetEncoding(1251).GetBytes(count.ToString());
+            byte[] CountSymbols;
+            if (count < 100)
+            {
+               CountSymbols = Encoding.GetEncoding(1251).GetBytes("0" + count.ToString());
+            }
+            else
+            {
+               CountSymbols = Encoding.GetEncoding(1251).GetBytes(count.ToString());
+            }
             for (int i = 0; i < 3; i++)
             {
                 BitArray bitCount = ByteToBit(CountSymbols[i]); //биты количества символов
@@ -696,6 +704,7 @@ namespace Test
                 bitCount[7] = colorArray[2];
                 rez[i] = BitToByte(bitCount);
             }
+            
             string m = Encoding.GetEncoding(1251).GetString(rez);
             return Convert.ToInt32(m, 10);
         }
@@ -851,6 +860,7 @@ namespace Test
                     messageArray[6] = colorArray[1];
                     messageArray[7] = colorArray[2];
                     message[index] = BitToByte(messageArray);
+                    
                     index++;
                 }
                 if (st)
@@ -895,7 +905,7 @@ namespace Test
                         {
                             rFile = openFileDialog1.FileName.ToString();
                             bPic1 = new Bitmap(rFile);
-                            pictureBox1.Image = bPic1;
+                            pictureBox2.Image = bPic1;
                         }
                     }
                 }
@@ -915,15 +925,101 @@ namespace Test
             }
         }
 
+        private void Steganograf2(string rText)
+        {
+            byte[] bText = Encoding.Unicode.GetBytes(rText);
+
+            List<byte> bList = new List<byte>();
+
+            bList = bText.ToList();
+            int CountText = bList.Count;
+
+            if (CountText > ((bPic1.Width * bPic1.Height)) - 4)
+            {
+                MessageBox.Show("Выбранная картинка мала для размещения выбранного текста", "Информация", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (isEncryption(bPic1))
+            {
+                MessageBox.Show("Файл уже зашифрован", "Информация", MessageBoxButtons.OK);
+                return;
+            }
+
+            byte[] Symbol = Encoding.GetEncoding(1251).GetBytes("/");
+            BitArray ArrBeginSymbol = ByteToBit(Symbol[0]);
+            Color curColor = bPic1.GetPixel(0, 0);
+            BitArray tempArray = ByteToBit(curColor.R);
+            tempArray[0] = ArrBeginSymbol[0];
+            tempArray[1] = ArrBeginSymbol[1];
+            byte nR = BitToByte(tempArray);
+
+            tempArray = ByteToBit(curColor.G);
+            tempArray[0] = ArrBeginSymbol[2];
+            tempArray[1] = ArrBeginSymbol[3];
+            tempArray[2] = ArrBeginSymbol[4];
+            byte nG = BitToByte(tempArray);
+
+            tempArray = ByteToBit(curColor.B);
+            tempArray[0] = ArrBeginSymbol[5];
+            tempArray[1] = ArrBeginSymbol[6];
+            tempArray[2] = ArrBeginSymbol[7];
+            byte nB = BitToByte(tempArray);
+
+            Color nColor = Color.FromArgb(nR, nG, nB);
+            bPic1.SetPixel(0, 0, nColor);
+
+            WriteCountText(CountText, bPic1); //записываем количество символов исходного текста
+
+            int index = 0;
+            int height = 0;
+            int width = 4;            
+            bool flag = true;
+            while (flag)
+            {
+
+                if (height > bPic1.Height)
+                {
+                    height = 0;
+                    width++;
+
+                }
+
+                Color pixelColor = bPic1.GetPixel(width, height);
+                BitArray colorArray = ByteToBit(pixelColor.R);
+                BitArray messageArray = ByteToBit(bList[index]);
+                colorArray[0] = messageArray[0]; //меняем
+                colorArray[1] = messageArray[1]; // в нашем цвете биты
+                byte newR = BitToByte(colorArray);
+
+                colorArray = ByteToBit(pixelColor.G);
+                colorArray[0] = messageArray[2];
+                colorArray[1] = messageArray[3];
+                colorArray[2] = messageArray[4];
+                byte newG = BitToByte(colorArray);
+
+                colorArray = ByteToBit(pixelColor.B);
+                colorArray[0] = messageArray[5];
+                colorArray[1] = messageArray[6];
+                colorArray[2] = messageArray[7];
+                byte newB = BitToByte(colorArray);
+
+                Color newColor = Color.FromArgb(newR, newG, newB);
+                bPic1.SetPixel(width, height, newColor);
+                height += bList[index];
+                index++;
+                if (index == bList.Count)
+                {
+                    flag = false;
+                }
+            }              
+        
+        }
+
         private void Metod11_Click(object sender, EventArgs e)
         {
             string temp = Textcript1.Text;
             Steganograf2(temp);
-        }
-
-        private void Steganograf2(string rText)
-        {
-            throw new NotImplementedException();
         }
 
         private void Metod12_Click(object sender, EventArgs e)
